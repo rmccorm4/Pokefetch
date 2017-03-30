@@ -20,4 +20,4 @@ information such as type, abilities, weaknesses, etc.
 
 3) Print the information for the pokemon in a screenfetch/neofetch fashion
 
-![Alt text]("~/Downloads/neofetch.png"?raw=true "Title")
+![Alt text](imgs/neofetch.png?raw=true "Title")
