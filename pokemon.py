@@ -12,6 +12,7 @@ html = request.content
 soup = BeautifulSoup(html, "html.parser")
 div = soup.find(class_="fooinfo")
 #print(div)
+
 base_image_url = "http://www.serebii.net/xy/pokemon/"
 full_image_url = base_image_url + pokedex_number + ".png"
 
