@@ -13,7 +13,7 @@ This script currently asks for the pokedex number of the pokemon you'd like
 to get information about, then it will get the picture and some related
 information such as type, abilities, weaknesses, etc.
 
-### To-do
+## To-do
 1) Change search to work by looking up name instead of pokedex number
 
 2) Print the information for the pokemon in a screenfetch/neofetch fashion
