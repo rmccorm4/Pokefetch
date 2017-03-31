@@ -16,6 +16,8 @@ information such as type, abilities, weaknesses, etc.
 ## To-do
 1) Change search to work by looking up name instead of pokedex number
 
-2) Print the information for the pokemon in a screenfetch/neofetch fashion
+2) Allow pokemon name to be entered as command-line argument
 
-3) Allow pokemon name to be entered as command-line argument
+3) Print the information for the pokemon in a screenfetch/neofetch fashion
+
+![Alt text](imgs/neofetch.png?raw=true "Title")
