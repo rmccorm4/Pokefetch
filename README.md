@@ -1,4 +1,4 @@
-# Pokemon-Scrape
+# Pokefetch
 This is a script I'm working on to further my webscraping skills
 ## Tools
 Python 3
