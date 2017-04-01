@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 
 begin_url = "http://www.serebii.net/pokedex-xy/"
-fpokedex_number = input("Enter pokedex number XXX, eg: pikachu would be 025: ")
+pokedex_number = input("Enter pokedex number XXX, eg: pikachu would be 025: ")
 end_url = ".shtml"
 full_url = begin_url + pokedex_number + end_url
 
@@ -33,6 +33,7 @@ spattack = spattackLine[spattackLine.find(">")+1:spattackLine.find("/")-1]
 spdef = spdefLine[spdefLine.find(">")+1:spdefLine.find("/")-1]
 speed = speedLine[speedLine.find(">")+1:speedLine.find("/")-1]
 
+"""
 print(baseStatsTotal)
 print(hp)
 print(attack)
@@ -40,6 +41,15 @@ print(defence)
 print(spattack)
 print(spdef)
 print(speed)
+"""
+
+weaknessList = soup.find_all(class_="footype")
+#print(weaknessList)
+for link in weaknessList:
+	print(link.get("src"))
+
+#weaknessList = [weaknessList.attrs("src") for result in weaknessList]
+#print(weaknessList)	
 
 base_image_url = "http://www.serebii.net/xy/pokemon/"
 full_image_url = base_image_url + pokedex_number + ".png"
