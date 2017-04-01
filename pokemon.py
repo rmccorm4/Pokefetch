@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import re
 
 begin_url = "http://www.serebii.net/pokedex-xy/"
 pokedex_number = input("Enter pokedex number XXX, eg: pikachu would be 025: ")
@@ -10,8 +11,11 @@ request = requests.get(full_url)
 html = request.content
 
 soup = BeautifulSoup(html, "html.parser")
-div = soup.find(class_="fooinfo")
-#print(div)
+#div = soup.find_all(class_="fooinfo")
+nameLine = soup.find(string=re.compile("#"+pokedex_number))
+#print(nameLine)
+pokemon_name = nameLine[:nameLine.find(" ")]
+print(pokemon_name)
 
 base_image_url = "http://www.serebii.net/xy/pokemon/"
 full_image_url = base_image_url + pokedex_number + ".png"
