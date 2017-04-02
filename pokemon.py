@@ -42,11 +42,34 @@ print(spattack)
 print(spdef)
 print(speed)
 """
-
+pageInfo = soup.get_text()
+print(pageInfo)
+print(type(pageInfo))
 weaknessList = soup.find_all(class_="footype")
+
+abilitiesIndex = pageInfo.find("Abilities:")
+abilities = pageInfo[abilitiesIndex:]
+endIndex = abilities.find("\n")
+abilities = abilities[:endIndex-1]
+print(abilities)
+
+genderIndex = pageInfo.find("GenderType")
+gender = pageInfo[genderIndex:]
+endIndex = gender.find("\n")
+gender = gender[:endIndex-1]
+print(gender)
+
+#classificationIndex = pageInfo.find("Classification\n")
+#classification = pageInfo[classificationIndex:]
+#helperIndex = classification.find("\n")
+#helper = classification[helperIndex:]
+#endIndex = helper.find("\n")
+#classification = classification[:endIndex+helperIndex]
+#print(classification)
+
 #print(weaknessList)
-for link in weaknessList:
-	print(link.get("src"))
+#for link in weaknessList:
+	#print(link.get("src"))
 
 #weaknessList = [weaknessList.attrs("src") for result in weaknessList]
 #print(weaknessList)	
