@@ -56,7 +56,7 @@ print(abilities)
 genderIndex = pageInfo.find("GenderType")
 gender = pageInfo[genderIndex:]
 endIndex = gender.find("\n")
-gender = gender[:endIndex-1]
+gender = gender[:endIndex]
 print(gender)
 
 #classificationIndex = pageInfo.find("Classification\n")
