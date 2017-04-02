@@ -1,14 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import sys
 
-begin_url = "http://www.serebii.net/pokedex-xy/"
-pokedex_number = input("Enter pokedex number XXX, eg: pikachu would be 025: ")
-end_url = ".shtml"
-full_url = begin_url + pokedex_number + end_url
-
-request = requests.get(full_url)
-html = request.content
+print(sys.argv)
+"""
+#request = requests.get(full_url)
+#html = request.content
 
 soup = BeautifulSoup(html, "html.parser")
 #div = soup.find_all(class_="fooinfo")
@@ -16,6 +14,21 @@ nameLine = soup.find(string=re.compile("#"+pokedex_number))
 #print(nameLine)
 pokemon_name = nameLine[:nameLine.find(" ")]
 print(pokemon_name)
+"""
+#Makes first letter uppercase and the rest lowercase
+pokemon = sys.argv[1].title()
+request = requests.get("http://serebii.net/pokedex-xy/")
+html = request.content
+soup = BeautifulSoup(html, "html.parser")
+pageInfo = soup.get_text()
+#pokedex entries start at index 5000
+pokemonIndex = pageInfo.find(pokemon, 5000)
+pokedexNumber = pageInfo[pokemonIndex-4:pokemonIndex-1]
+
+begin_url = "http://www.serebii.net/pokedex-xy/"
+end_url = ".shtml"
+full_url = begin_url + pokedex_number + end_url
+
 
 baseStatsTotal = soup.find(string=re.compile("Base Stats - Total:"))
 baseStats = soup.find_all(class_="fooinfo")
@@ -33,7 +46,6 @@ spattack = spattackLine[spattackLine.find(">")+1:spattackLine.find("/")-1]
 spdef = spdefLine[spdefLine.find(">")+1:spdefLine.find("/")-1]
 speed = speedLine[speedLine.find(">")+1:speedLine.find("/")-1]
 
-"""
 print(baseStatsTotal)
 print(hp)
 print(attack)
@@ -41,29 +53,24 @@ print(defence)
 print(spattack)
 print(spdef)
 print(speed)
-"""
-pageInfo = soup.get_text()
-print(pageInfo)
-print(type(pageInfo))
+
 weaknessList = soup.find_all(class_="footype")
 
 abilitiesIndex = pageInfo.find("Abilities:")
 abilities = pageInfo[abilitiesIndex:]
 endIndex = abilities.find("\n")
 abilities = abilities[:endIndex-1]
-print(abilities)
+#print(abilities)
 
 genderIndex = pageInfo.find("GenderType")
 gender = pageInfo[genderIndex:]
 endIndex = gender.find("\n")
 gender = gender[:endIndex]
-print(gender)
+#print(gender)
 
 #classificationIndex = pageInfo.find("Classification\n")
 #classification = pageInfo[classificationIndex:]
-#helperIndex = classification.find("\n")
-#helper = classification[helperIndex:]
-#endIndex = helper.find("\n")
+#endIndex = classification.find("\n")
 #classification = classification[:endIndex+helperIndex]
 #print(classification)
 
@@ -84,3 +91,5 @@ myfile = open("imgs/"+filename, "wb")
 for byte in response:
 	myfile.write(byte)
 myfile.close()
+
+"""
