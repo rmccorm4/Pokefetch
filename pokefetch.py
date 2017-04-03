@@ -66,6 +66,8 @@ gender = page_info2[gender_index:]
 end_index = gender.find("\n")
 gender = gender[:end_index]
 gender = gender[gender.find(" ")+1:]
+if "is Genderless" in gender:
+	gender = "Genderless"
 
 
 ######## Get Classification ########
