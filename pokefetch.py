@@ -25,9 +25,9 @@ soup1 = BeautifulSoup(html1, "html.parser")
 page_info1 = soup1.get_text()
 # Pokedex Entries Start At Index 5000
 pokemon_index = page_info1.find(pokemon, 5000)
-print(pokemon)
-print(pokemon_index)
-print(page_info1)
+#print(pokemon)
+#print(pokemon_index)
+#print(page_info1)
 
 if pokemon_index == -1:
 	print("You didn't enter a valid pokemon!")
