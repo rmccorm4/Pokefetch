@@ -98,6 +98,14 @@ for byte in response:
 	myfile.write(byte)
 myfile.close()
 
+myfile = open("imgs/"+filename, "rb")
+data = myfile.read()
+#print(data)
+myfile.close()
+
+print("%b" % data)
+#print("\033[14t" + ''.join(allbytes)
+
 ######## Print everything out ########
 print("Name: ", pokemon)
 print("Pokedex Number: ", pokedex_number)
