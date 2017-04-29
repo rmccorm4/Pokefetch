@@ -22,10 +22,6 @@ to get information about, then it will get the picture and some related
 information such as type, abilities, weaknesses, etc.
 
 ## To-do
-1) Change search to work by looking up name instead of pokedex number
-
-2) Allow pokemon name to be entered as command-line argument
-
-3) Print the information for the pokemon in a screenfetch/neofetch fashion, but replace OS logo with pokemon image and replace cpu information with pokemon name, stats, abilities, etc.
+1) Print the information for the pokemon in a screenfetch/neofetch fashion, but replace OS logo with pokemon image and replace cpu information with pokemon name, stats, abilities, etc.
 
 ![Alt text](imgs/neofetch.png?raw=true "Title")
