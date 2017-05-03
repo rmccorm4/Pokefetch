@@ -25,9 +25,6 @@ soup1 = BeautifulSoup(html1, "html.parser")
 page_info1 = soup1.get_text()
 # Pokedex Entries Start At Index 5000
 pokemon_index = page_info1.find(pokemon, 5000)
-#print(pokemon)
-#print(pokemon_index)
-#print(page_info1)
 
 if pokemon_index == -1:
 	print("You didn't enter a valid pokemon!")
@@ -78,13 +75,14 @@ gender = gender[gender.find(" ")+1:]
 if "is Genderless" in gender:
 	gender = "Genderless"
 
-
+"""
 ######## Get Classification ########
-#classification_index = pageInfo.find("Classification\n")
-#classification = pageInfo[classification_index:]
-#end_index = classification.find("\n")
-#classification = classification[:end_index]
-#print(classification)
+classification_index = pageInfo.find("Classification\n")
+classification = pageInfo[classification_index:]
+end_index = classification.find("\n")
+classification = classification[:end_index]
+print(classification)
+"""
 
 ######## Get Picture ########
 base_image_url = "http://www.serebii.net/xy/pokemon/"
@@ -98,6 +96,9 @@ for byte in response:
 	myfile.write(byte)
 myfile.close()
 
+"""
+My attempt at printing out an image with escape sequence in python
+
 myfile = open("imgs/"+filename, "rb")
 data = myfile.read()
 #print(data)
@@ -105,6 +106,7 @@ myfile.close()
 
 print("%b" % data)
 #print("\033[14t" + ''.join(allbytes)
+"""
 
 ######## Print everything out ########
 print("Name: ", pokemon)

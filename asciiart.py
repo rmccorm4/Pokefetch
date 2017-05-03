@@ -1,3 +1,9 @@
+"""
+This file was found online when trying to learn how to print ascii art
+
+This is NOT my own code
+"""
+
 ASCII_CHARS = [ '#', '?', '%', '.', 'S', '+', '.', '*', ':', ',', '@']
 
 def scale_image(image, new_width=100):
