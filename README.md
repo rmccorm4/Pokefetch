@@ -24,4 +24,14 @@ information such as type, abilities, weaknesses, etc.
 ## To-do
 1) Print the information for the pokemon in a screenfetch/neofetch fashion, but replace OS logo with pokemon image and replace cpu information with pokemon name, stats, abilities, etc.
 
-![Alt text](imgs/neofetch.png?raw=true "Title")
+![Alt text](imgs/neofetch.png?raw=true "Neofetch Example")
+
+
+## Current progress
+This is currently an example of what I have so far. I still need to:
+
+1) Get the picture on left and text on right but my bash knowledge is minimal 
+
+2) Need to access the image for every correct input, Pikachu.png is currently hard-coded
+![Alt text](imgs/pokefetchProgressDemo.png?raw=true "Progress Picture")
+
