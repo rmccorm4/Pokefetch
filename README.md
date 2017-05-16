@@ -30,7 +30,7 @@ information such as type, abilities, weaknesses, etc.
 ## Current progress
 This is currently an example of what I have so far. I still need to:
 
-1) Get the picture on left and text on right but my bash knowledge is minimal 
+1) Get the picture on left and text on right but my bash knowledge is currently minimal, trying to improve that
 
 2) Need to access the image for every correct input, Pikachu.png is currently hard-coded
 ![Alt text](imgs/pokefetchProgressDemo.png?raw=true "Progress Picture")
