@@ -8,15 +8,15 @@
 
 
 
-Name:  Jolteon
-Pokedex Number:  135
-Gender Ratio:   ♂:87.5% ♀:12.5%
-Abilities: Volt Absorb - Quick Feet (Hidden Ability)
+Name:  Lugia
+Pokedex Number:  249
+Gender Ratio:  Genderless
+Abilities: Pressure - Multiscale (Hidden Ability)
 ---Base Stats---
-Base Stats - Total: 525
-Hp:  65
-Attack:  65
-Defence:  60
-Special Attack:  110
-Special Defence:  95
-Speed:  130
+Base Stats - Total: 680
+Hp:  106
+Attack:  90
+Defence:  130
+Special Attack:  90
+Special Defence:  154
+Speed:  110
