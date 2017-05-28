@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Make output directory
+mkdir output
+
 # Prepend 10 blank lines for nice format
 echo > output/stats.txt
 for ((i=0; i<9; i++));
