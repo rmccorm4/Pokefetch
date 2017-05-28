@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Make output directory
-mkdir output
+# Make output directory if it doesn't already exist
+mkdir -p output
 
 # Prepend 10 blank lines for nice format
 echo > output/stats.txt
