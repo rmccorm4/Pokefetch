@@ -37,3 +37,5 @@ Things I still want to accomplish:
 1) Make sure it works for every single pokemon, including difficult names such as "Mr. Mime" and "Ho-oh"
 
 2) Get higher quality images to output if possible, need to research this more
+
+3) Add a -shiny flag to output the shiny sprite instead of the regular one
