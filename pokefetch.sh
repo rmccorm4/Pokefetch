@@ -19,4 +19,4 @@ POKEMON=${POKEMON[@]^}    # This converts to Title Case
 catimg -w 120 "imgs/$POKEMON.png" > output/image.txt
 
 # Print image and stats side by side
-pr -mts image.txt stats.txt
+pr -mts output/image.txt output/stats.txt
