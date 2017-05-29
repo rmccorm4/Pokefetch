@@ -73,3 +73,10 @@ However this requires a full-screen terminal in order to come out nicely.
 * Scrape more relevant information about the pokemon
 
 * Make script work for default size terminal as well as full-screen?
+
+* Rewrite my scraping method to be much cleaner and more uniform
+
+* Implement old-school sprites because they come out much nicer as seen below
+
+
+![Alt text](imgs/oldschool_sprite.png?raw=true "Old School Sprite Example")
