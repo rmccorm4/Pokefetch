@@ -8,7 +8,7 @@ Python 3
 Bash
 * catimg
 
-[Serebii](www.serebii.net)
+[Serebii](https://www.serebii.net)
 
 ## Context
 This script currently asks for the pokedex number of the pokemon you'd like
