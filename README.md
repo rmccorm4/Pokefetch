@@ -64,12 +64,12 @@ However this requires a full-screen terminal in order to come out nicely.
 
 ## To-do
 
-1) Make sure it works for every single pokemon, including difficult names such as "Mr. Mime" and "Ho-oh"
+* Make sure it works for every single pokemon, including difficult names such as "Mr. Mime" and "Ho-oh"
 
-2) Get higher quality images to output if possible, need to research this more
+* Get higher quality images to output if possible, need to research this more
 
-3) Add a -shiny flag to output the shiny sprite instead of the regular one
+* Add a -shiny flag to output the shiny sprite instead of the regular one
 
-4) Scrape more relevant information about the pokemon
+* Scrape more relevant information about the pokemon
 
-5) Make script work for default size terminal as well as full-screen?
+* Make script work for default size terminal as well as full-screen?
