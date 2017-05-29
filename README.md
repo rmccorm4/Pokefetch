@@ -2,8 +2,13 @@
 This is a script I'm working on to further my webscraping skills
 ## Tools
 Python 3
+* Requests
+* BeautifulSoup
 
-www.serebii.net
+Bash
+* catimg
+
+[Serebii](www.serebii.net)
 
 ## Context
 This script currently asks for the pokedex number of the pokemon you'd like
@@ -22,17 +27,24 @@ I wanted to model the output to be similar to screenfetch and neofetch, two popu
 
 Make sure you have all of the necessary third-party libraries:
 
-Python requests module 
+#### Python requests module 
 
 ```
 pip install requests
 ```
 
-Python BeautifulSoup module 
+#### Python BeautifulSoup module 
 
 ```
 pip install bs4
 ```
+
+
+#### catimg
+
+Follow the instructions here:
+[catimg](https://github.com/posva/catimg)
+
 
 ### Running the script:
 
