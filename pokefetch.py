@@ -6,16 +6,22 @@ import re
 ######## Get Pokemon Name ########
 if len(sys.argv) < 2:
 	pokemon = input("Enter the name of the pokemon to look up: ").title()
+	print(pokemon)
 
 # Two Word Names Like Mime Jr.
 elif len(sys.argv) == 3:
 	pokemon = (sys.argv[1] + " " + sys.argv[2]).title()
+	#print(pokemon)
 
 else:
 	pokemon = sys.argv[1].title()
+	#print(pokemon)
 
 if pokemon == "Mr. Mime":
 	pokemon = "Mr.Mime" #serebii listed this way
+
+elif pokemon == "Ho-Oh":
+	pokemon = "Ho-oh" #serebii listed this way
 
 ######## Get Pokedex Entry Number  ########
 begin_url = "http://serebii.net/pokedex-xy/"
@@ -25,6 +31,8 @@ soup1 = BeautifulSoup(html1, "html.parser")
 page_info1 = soup1.get_text()
 # Pokedex Entries Start At Index 5000
 pokemon_index = page_info1.find(pokemon, 5000)
+
+#print(pokemon_index)
 
 if pokemon_index == -1:
 	print("You didn't enter a valid pokemon!")
@@ -42,6 +50,10 @@ page_info2 = soup2.get_text()
 ######## Get Stats ########
 base_total = soup2.find(string=re.compile("Base Stats - Total:"))
 base_stats = soup2.find_all(class_="fooinfo")
+
+#print(base_total)
+#print(base_stats)
+#print(len(base_stats))
 
 hp = str(base_stats[len(base_stats)-21])
 attack = str(base_stats[len(base_stats)-20])
