@@ -76,6 +76,8 @@ However this requires a full-screen terminal in order to come out nicely.
 
 * Rewrite my scraping method to be much cleaner and more uniform
 
+* Include Gen VII pokemon
+
 * Implement old-school sprites because they come out much nicer as seen below
 
 
