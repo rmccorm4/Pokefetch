@@ -9,6 +9,7 @@ Bash
 * catimg
 
 [Serebii](https://www.serebii.net)
+* Currently rewriting my scraper to use [Bulbepedia](http://www.bulbapedia.bulbagarden.net)
 
 ## Context
 This script currently asks for the pokedex number of the pokemon you'd like
