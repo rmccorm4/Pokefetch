@@ -69,6 +69,8 @@ However this requires a full-screen terminal in order to come out nicely.
 
 * Get higher quality images to output if possible, need to research this more
 
+* Conversely, try to find more pixellated versions of the newer models in hopes of getting a prettier output
+
 * Add a -shiny flag to output the shiny sprite instead of the regular one
 
 * Scrape more relevant information about the pokemon
