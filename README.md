@@ -9,6 +9,7 @@ Bash
 * catimg
 
 [Serebii](https://www.serebii.net)
+* Currently rewriting my scraper to use [Bulbapedia](http://bulbapedia.bulbagarden.net)
 
 ## Context
 This script currently asks for the pokedex number of the pokemon you'd like
@@ -68,6 +69,8 @@ However this requires a full-screen terminal in order to come out nicely.
 
 * Get higher quality images to output if possible, need to research this more
 
+* Conversely, try to find more pixellated versions of the newer models in hopes of getting a prettier output
+
 * Add a -shiny flag to output the shiny sprite instead of the regular one
 
 * Scrape more relevant information about the pokemon
@@ -79,6 +82,8 @@ However this requires a full-screen terminal in order to come out nicely.
 * Include Gen VII pokemon
 
 * Implement old-school sprites because they come out much nicer as seen below
+
+* Possibly add old school gifs from the special games like yellow and crystal
 
 
 ![Alt text](imgs/oldschool_sprite.png?raw=true "Old School Sprite Example")
