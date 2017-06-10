@@ -58,4 +58,8 @@ for t in soup.find_all(title=re.compile("(type)")):
 		break
 
 ### ABILITIES ###
-print(soup.find_all("a", href=re.compile("(Ability)"), title=re.compile("(Ability)")))
+tags = list(set([str(word) for word in soup.find_all("a", href=re.compile("(Ability)"), title=re.compile("(Ability)")) if "Cacophony" not in str(word) and '"Ability"' not in str(word)]))
+regex = r'/{title="}(.*?){ (Ability)}/m'
+
+print(tags)
+print(list(re.match(regex, word) for word in tags))
