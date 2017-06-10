@@ -83,5 +83,7 @@ However this requires a full-screen terminal in order to come out nicely.
 
 * Implement old-school sprites because they come out much nicer as seen below
 
+* Possibly add old school gifs from the special games like yellow and crystal
+
 
 ![Alt text](imgs/oldschool_sprite.png?raw=true "Old School Sprite Example")
