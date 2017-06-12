@@ -59,7 +59,11 @@ for t in soup.find_all(title=re.compile("(type)")):
 
 ### ABILITIES ###
 tags = list(set([str(word) for word in soup.find_all("a", href=re.compile("(Ability)"), title=re.compile("(Ability)")) if "Cacophony" not in str(word) and '"Ability"' not in str(word)]))
-regex = r'/{title="}(.*?){ (Ability)}/m'
 
-print(tags)
-print(list(re.match(regex, word) for word in tags))
+abilities = []
+for sentence in tags:
+	begin = sentence.find('wiki/')+5
+	end = sentence.find('_(Ability)')
+	abilities.append(sentence[begin:end])
+
+print(abilities)
