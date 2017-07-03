@@ -29,6 +29,13 @@ else:
 # Fix Special Cases like Mr. Mime and Mime Jr. ###
 pokemon = pokemon.replace(' ', '_')
 
+""" Get optional arguments """
+parser = argparse.ArgumentParser(description='Look-up pokemon in the terminal for their picture and information.')
+parser.add_argument('--shiny', type=str, default='false', help='"true" or "false" to get the shiny model of the pokemon.')
+parser.add_argument('--old', type=str, default='true', help='"true" or "false" to get the oldest available model of the pokemon.')
+args = parser.parse_args()
+shiny, old = args.shiny, args.old
+
 """ Start Webscraping """
 url = "http://bulbapedia.bulbagarden.net/wiki/" + pokemon + "_(Pok%C3%A9mon)"
 request = requests.get(url)
