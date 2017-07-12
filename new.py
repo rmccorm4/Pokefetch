@@ -7,6 +7,7 @@ TODO: Use generation (pokedex number range) to get earliest sprite?
 """ Standard Libraries """
 import sys
 import re
+import argparse
 
 """ Third Party Libraries """
 from bs4 import BeautifulSoup
@@ -31,10 +32,10 @@ pokemon = pokemon.replace(' ', '_')
 
 """ Get optional arguments """
 parser = argparse.ArgumentParser(description='Look-up pokemon in the terminal for their picture and information.')
-parser.add_argument('--shiny', type=str, default='false', help='"true" or "false" to get the shiny model of the pokemon.')
-parser.add_argument('--old', type=str, default='true', help='"true" or "false" to get the oldest available model of the pokemon.')
-args = parser.parse_args()
-shiny, old = args.shiny, args.old
+#parser.add_argument('--shiny', type=str, default='false', help='"true" or "false" to get the shiny model of the pokemon.')
+#parser.add_argument('--old', type=str, default='true', help='"true" or "false" to get the oldest available model of the pokemon.')
+#args = parser.parse_args()
+#shiny, old = args.shiny, args.old
 
 """ Start Webscraping """
 url = "http://bulbapedia.bulbagarden.net/wiki/" + pokemon + "_(Pok%C3%A9mon)"
@@ -67,10 +68,14 @@ for t in soup.find_all(title=re.compile("(type)")):
 ### ABILITIES ###
 tags = list(set([str(word) for word in soup.find_all("a", href=re.compile("(Ability)"), title=re.compile("(Ability)")) if "Cacophony" not in str(word) and '"Ability"' not in str(word)]))
 
-abilities = []
+ability_list = []
 for sentence in tags:
 	begin = sentence.find('wiki/')+5
 	end = sentence.find('_(Ability)')
-	abilities.append(sentence[begin:end])
+	ability_list.append(sentence[begin:end])
+
+abilities = ""
+for ability in ability_list:
+	abilities += ability + " - "
 
 print(abilities)
