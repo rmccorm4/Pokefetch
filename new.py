@@ -79,3 +79,6 @@ for ability in ability_list:
 	abilities += ability + " - "
 
 print(abilities)
+
+### GENDER RATIO ###
+
