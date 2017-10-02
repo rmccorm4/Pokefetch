@@ -135,5 +135,5 @@ print("Special Attack: ", spec_attack)
 print("Special Defence: ", spec_defence)
 print("Speed: ", speed)
 
-img_path = "/home/ryan/tmp/gen5_pokemon/main-sprites/black-white/" + pokedex_number + ".png"
-subprocess.call('catimg -w 120' + img_path ' > output/image.txt')
+#img_path = "/home/ryan/tmp/gen5_pokemon/main-sprites/black-white/" + pokedex_number + ".png"
+#subprocess.call('catimg -w 120' + img_path ' > output/image.txt')

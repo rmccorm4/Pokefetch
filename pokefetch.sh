@@ -23,7 +23,7 @@ elif [ $POKEMON == "Mr. Mime" ] ; then
 fi
 
 # Get image and output to file
-#catimg -w 120 "imgs/$POKEMON.png" > output/image.txt
+catimg -w 120 "imgs/$POKEMON.png" > output/image.txt
 #catimg "imgs/4.png" > output/image.txt
 
 # Print image and stats side by side
