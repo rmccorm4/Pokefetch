@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-#import subprocess
 import requests
 import sys
 import re
@@ -63,10 +62,6 @@ spec_attack = spec_attack[spec_attack.find(">")+1 : spec_attack.find("/")-1]
 spec_defence = spec_defence[spec_defence.find(">")+1 : spec_defence.find("/")-1]
 speed = speed[speed.find(">")+1:speed.find("/")-1]
 
-######## Get Weaknesses ########
-# Doesn't work at the moment
-#weakness_list = soup.find_all(class_="footype")
-
 ######## Get Abilities ########
 abilities_index = page_info2.find("Abilities:")
 abilities = page_info2[abilities_index:]
@@ -82,26 +77,15 @@ gender = gender[gender.find(" ")+1:]
 if "is Genderless" in gender:
 	gender = "Genderless"
 
-"""
-# Doesn't work at the moment
-
-######## Get Classification ########
-classification_index = pageInfo.find("Classification\n")
-classification = pageInfo[classification_index:]
-end_index = classification.find("\n")
-classification = classification[:end_index]
-print(classification)
-"""
-
 ######## Get Image ########
 base_image_url = "http://www.serebii.net/xy/pokemon/"
 full_image_url = base_image_url + pokedex_number + ".png"
+image_bytes = requests.get(full_image_url)
 
-response = requests.get(full_image_url)
-
+# Write bytes of image to file
 filename = pokemon.title() + ".png"
 myfile = open("imgs/"+filename, "wb")
-for byte in response:
+for byte in image_bytes:
     myfile.write(byte)
 myfile.close()
 
