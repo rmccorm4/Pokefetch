@@ -18,6 +18,8 @@ POKEMON=$@                # '$@' refers to command line argument
 POKEMON=${POKEMON[@]^}    # This converts to Title Case
 if [ $POKEMON == "Ho-oh" ] ; then
 	POKEMON="Ho-Oh"
+# This won't work, need to handle space separated args eventualy
+# For now just input names like Mr.Mime with no spaces
 elif [ $POKEMON == "Mr. Mime" ] ; then
 	POKEMON="Mr.Mime"
 fi

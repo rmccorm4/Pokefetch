@@ -45,6 +45,8 @@ page_info2 = soup2.get_text()
 
 ######## Get Stats ########
 base_total = soup2.find(string=re.compile("Base Stats - Total:"))
+# Only want everything after Total
+base_total = base_total[base_total.find("Total"):]
 base_stats = soup2.find_all(class_="fooinfo")
 
 hp = str(base_stats[len(base_stats)-21])
@@ -106,7 +108,7 @@ myfile.close()
 ######## Print everything out ########
 print("Name: ", pokemon)
 print("Pokedex Number: ", pokedex_number)
-print("Gender Ratio: ", str(gender))#.encode('utf-8'))
+print("Gender Ratio: ", str(gender))
 print(abilities)
 print("---Base Stats---")
 print(base_total)
