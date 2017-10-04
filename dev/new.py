@@ -65,6 +65,7 @@ for t in soup.find_all(title=re.compile("(type)")):
 	else:
 		break
 
+
 ### ABILITIES ###
 tags = list(set([str(word) for word in soup.find_all("a", href=re.compile("(Ability)"), title=re.compile("(Ability)")) if "Cacophony" not in str(word) and '"Ability"' not in str(word)]))
 
@@ -78,7 +79,12 @@ abilities = ""
 for ability in ability_list:
 	abilities += ability + " - "
 
-print(abilities)
 
 ### GENDER RATIO ###
 
+
+
+print(pokemon)
+print(pokedex)
+print(types)
+print(abilities)

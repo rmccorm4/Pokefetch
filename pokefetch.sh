@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 # Make output directory if it doesn't already exist
 mkdir -p output
 
-# Prepend 10 blank lines for nice format
+# Prepend 10 blank lines for nice formatting next to image
 echo > output/stats.txt
 for ((i=0; i<9; i++));
 do
@@ -24,7 +24,6 @@ fi
 
 # Get image and output to file
 catimg -w 120 "imgs/$POKEMON.png" > output/image.txt
-#catimg "imgs/4.png" > output/image.txt
 
 # Print image and stats side by side
 pr -mts output/image.txt output/stats.txt

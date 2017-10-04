@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import subprocess
+#import subprocess
 import requests
 import sys
 import re
@@ -7,16 +7,13 @@ import re
 ######## Get Pokemon Name ########
 if len(sys.argv) < 2:
 	pokemon = input("Enter the name of the pokemon to look up: ").title()
-	print(pokemon)
 
 # Two Word Names Like Mime Jr.
 elif len(sys.argv) == 3:
 	pokemon = (sys.argv[1] + " " + sys.argv[2]).title()
-	#print(pokemon)
 
 else:
 	pokemon = sys.argv[1].title()
-	#print(pokemon)
 
 if pokemon == "Mr. Mime":
 	pokemon = "Mr.Mime" #serebii listed this way
@@ -32,8 +29,6 @@ soup1 = BeautifulSoup(html1, "html.parser")
 page_info1 = soup1.get_text()
 # Pokedex Entries Start At Index 5000
 pokemon_index = page_info1.find(pokemon, 5000)
-
-#print(pokemon_index)
 
 if pokemon_index == -1:
 	print("You didn't enter a valid pokemon!")
@@ -52,10 +47,6 @@ page_info2 = soup2.get_text()
 base_total = soup2.find(string=re.compile("Base Stats - Total:"))
 base_stats = soup2.find_all(class_="fooinfo")
 
-#print(base_total)
-#print(base_stats)
-#print(len(base_stats))
-
 hp = str(base_stats[len(base_stats)-21])
 attack = str(base_stats[len(base_stats)-20])
 defence = str(base_stats[len(base_stats)-19])
@@ -71,6 +62,7 @@ spec_defence = spec_defence[spec_defence.find(">")+1 : spec_defence.find("/")-1]
 speed = speed[speed.find(">")+1:speed.find("/")-1]
 
 ######## Get Weaknesses ########
+# Doesn't work at the moment
 #weakness_list = soup.find_all(class_="footype")
 
 ######## Get Abilities ########
@@ -89,6 +81,8 @@ if "is Genderless" in gender:
 	gender = "Genderless"
 
 """
+# Doesn't work at the moment
+
 ######## Get Classification ########
 classification_index = pageInfo.find("Classification\n")
 classification = pageInfo[classification_index:]
@@ -97,7 +91,7 @@ classification = classification[:end_index]
 print(classification)
 """
 
-######## Get Picture ########
+######## Get Image ########
 base_image_url = "http://www.serebii.net/xy/pokemon/"
 full_image_url = base_image_url + pokedex_number + ".png"
 
@@ -106,25 +100,13 @@ response = requests.get(full_image_url)
 filename = pokemon.title() + ".png"
 myfile = open("imgs/"+filename, "wb")
 for byte in response:
-	myfile.write(byte)
+    myfile.write(byte)
 myfile.close()
-
-"""
-My attempt at printing out an image with escape sequence in python
-
-myfile = open("imgs/"+filename, "rb")
-data = myfile.read()
-#print(data)
-myfile.close()
-
-print("%b" % data)
-#print("\033[14t" + ''.join(allbytes)
-"""
 
 ######## Print everything out ########
 print("Name: ", pokemon)
 print("Pokedex Number: ", pokedex_number)
-print("Gender Ratio: ", gender)
+print("Gender Ratio: ", str(gender))#.encode('utf-8'))
 print(abilities)
 print("---Base Stats---")
 print(base_total)
@@ -134,6 +116,3 @@ print("Defence: ", defence)
 print("Special Attack: ", spec_attack)
 print("Special Defence: ", spec_defence)
 print("Speed: ", speed)
-
-#img_path = "/home/ryan/tmp/gen5_pokemon/main-sprites/black-white/" + pokedex_number + ".png"
-#subprocess.call('catimg -w 120' + img_path ' > output/image.txt')
