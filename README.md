@@ -22,11 +22,16 @@ I wanted to model the output to be similar to screenfetch and neofetch, two popu
 
 
 
-## How to use it
+## Setup
 
 ### Starting steps:
 
-Make sure you have all of the necessary third-party libraries:
+Clone this repository to a directory of your choice in the command-line:
+```
+git clone https://github.com/rmccorm4/pokefetch
+```
+
+Make sure you have all of the necessary third-party libraries described below
 
 #### Python requests module 
 
@@ -43,9 +48,21 @@ pip install bs4
 
 #### catimg
 
-Follow the instructions here:
+On Arch Linux:
+```
+yaourt -S catimg
+```
+
+Otherwise, follow the instructions here:
 [https://github.com/posva/catimg](https://github.com/posva/catimg)
 
+### Disclaimers
+
+The "Gender" category that gets printed out uses ascii symbols and may
+not print properly depending on your terminal configurations. 
+
+Personally, I use `adobe-source-code-pro-fonts` and I make sure that my 
+terminal's default encoding is `UTF-8`
 
 ### Running the script:
 
