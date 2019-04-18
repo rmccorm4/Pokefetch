@@ -82,25 +82,15 @@ However this requires a full-screen terminal in order to come out nicely.
 
 ## To-do
 
-* Make sure it works for every single pokemon, including difficult names such as "Mr. Mime" and "Ho-oh"
-
-* Get higher quality images to output if possible, need to research this more
-
-* Conversely, try to find more pixellated versions of the newer models in hopes of getting a prettier output
-
-* Add a -shiny flag to output the shiny sprite instead of the regular one
-
-* Scrape more relevant information about the pokemon
-
-* Make script work for default size terminal as well as full-screen?
-
-* Rewrite my scraping method to be much cleaner and more uniform
-
-* Include Gen VII pokemon
-
-* Implement old-school sprites because they come out much nicer as seen below
-
-* Possibly add old school gifs from the special games like yellow and crystal
-
+* [ ] Make sure it works for every single pokemon, including difficult names such as "Mr. Mime" and "Ho-oh"
+* [ ] Get higher quality images to output if possible, need to research this more
+* [ ] Conversely, try to find more pixellated versions of the newer models in hopes of getting a prettier output
+* [ ] Add a -shiny flag to output the shiny sprite instead of the regular one
+* [ ] Scrape more relevant information about the pokemon
+* [ ] Make script work for default size terminal as well as full-screen?
+* [ ] Rewrite my scraping method to be much cleaner and more uniform
+* [ ] Include Gen VII pokemon
+* [ ] Implement old-school sprites because they come out much nicer as seen below
+* [ ] Possibly add old school gifs from the special games like yellow and crystal
 
 ![Alt text](imgs/oldschool_sprite.png?raw=true "Old School Sprite Example")
